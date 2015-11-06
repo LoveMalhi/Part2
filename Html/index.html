@@ -1,0 +1,106 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>jQuery memory card / concentration / pairs game</title>
+  <meta name="description" content="Quizy jquery plugin for creating memory game (concentration gaim, pairs game)">
+  <meta name="keywords" content="jquery plugin, memory game, concentration, pairs game, javascript, jquery" />
+
+  <meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="../css/game.css">
+  
+  <style>
+    body{
+      font-family:Helvetica, Arial, Verdana;
+      text-align: center;
+    }
+    
+    #game1{
+      margin:auto;
+      width:1000px;
+    }
+    
+    .text-style1{
+      font-size:14pt;
+      color:#56605f;
+      font-weight:normal;
+      text-shadow: 1px 1px 1px #fff;
+      margin:0;
+      line-height:24pt;
+    }
+    
+    .reset-button{
+      margin: 0 0 1.5em 0;
+    }
+    
+  </style>
+
+</head>
+<body>
+<h1>MATCH THE CARDS</h1>
+
+  <div id="main" role="main">
+    
+    <div id="game1" class="game1">
+      
+	  <ul>
+      
+	   <li class="match1">
+            <img src="Images/Ablack.jpe" height="150" width="150">
+          </li>
+          <li class="match2">
+            <img src="Images/Kingred.jpg" height="150" width="150">
+          </li>
+          <li class="match3">
+            <img src="Images/queendiamond.jpe" height="150" width="150">
+          </li>
+          <li class="match4">
+            <img src="Images/Queenblack.jpg" height="150" width="150">
+          </li>
+          <li class="match5">
+            <img src="Images/jackheart.jpg" height="150" width="150">
+          </li>
+          
+          <li class="match1">
+          <img src="Images/Ablack.jpe" height="150" width="150">
+          </li>
+          <li class="match2">
+             <img src="Images/Kingred.jpg" height="150" width="150">
+          </li>
+          <li class="match3">
+              <img src="Images/queendiamond.jpe" height="150" width="150">
+          </li>
+          <li class="match4">
+           <img src="Images/Queenblack.jpg" height="150" width="150">
+          </li>
+          <li class="match5">
+             <img src="Images/jackheart.jpg" height="150" width="150">
+          </li>
+          
+      </ul>
+    </div>
+    
+    
+    <div class="reset-button">
+      <a id="restart" href="">CLICK HERE TO REST THE GAME</a>
+    </div>
+	
+</div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../js/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="../js/jquery-ui-1.8.17.custom.min.js"></script>
+  
+  <script src="../js/jquery.flip.min.js"></script>
+  <script src="../js/jquery.quizymemorygame.js"></script>
+  
+  <script>
+    var quizyParams = {itemWidth: 156, itemHeight: 150, itemsMargin:30, colCount:5, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true, randomised:true }; 
+    $('#game1').quizyMemoryGame(quizyParams);
+    $('#restart').click(function(){
+      $('#game1').quizyMemoryGame('restart');
+      return false;
+    });
+  </script>
+	</body>
+	</html>
